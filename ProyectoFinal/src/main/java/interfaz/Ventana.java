@@ -1,7 +1,6 @@
 package interfaz;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class Ventana extends JFrame {
     private PanelPrincipal mypanel;

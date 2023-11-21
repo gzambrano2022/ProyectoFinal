@@ -2,40 +2,25 @@ package interfaz;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 public class PanelPrincipal extends JPanel {
-    private Rectangle rectangulo;
+
+    private Alimento comida;
+    private Animales animales;
+    private Habitat habitat;
+
     public PanelPrincipal() {
-        this.setBackground(Color.BLACK);
-        rectangulo = new Rectangle(50, 0, 70, 50);
-        agregaMouseListener();
-    }
 
-    private void agregaMouseListener(){
-        this.addMouseMotionListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                if(rectangulo.contains(e.getPoint())){
-                    abrirNuevoFrame();
-                }
-            }
-        });
-    }
+        comida = new Alimento();
+        animales = new Animales();
+        habitat = new Habitat();
 
-    private void abrirNuevoFrame() {
-        JFrame nuevoFrame = new JFrame("Nuevo JFrame");
-        nuevoFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        nuevoFrame.setSize(300, 200);
-        nuevoFrame.setLocationRelativeTo(null);
-        nuevoFrame.setVisible(true);
-    }
+        this.setLayout(new BorderLayout());
+        this.setBackground(Color.white);
 
-    public void paintComponent(Graphics g){
-        super.paintComponent(g);
-        g.setColor(Color.MAGENTA);
-        g.fillRect(rectangulo.x,rectangulo.y, rectangulo.width, rectangulo.height);
+        this.add(habitat, BorderLayout.CENTER);
+        this.add(animales, BorderLayout.WEST);
+        this.add(comida, BorderLayout.EAST);
+
     }
 }
