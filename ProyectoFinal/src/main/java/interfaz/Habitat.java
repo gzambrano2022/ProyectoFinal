@@ -2,8 +2,16 @@ package interfaz;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Habitat extends JPanel {
+    private Sabana sabana;
+    private Humedales humedales;
+    private Bosque bosque;
+    private Aviario aviario;
+    private Selva selva;
+    private Acuario acuario;
     public Habitat() {
 
         this.setLayout(new GridLayout(2,3));
@@ -22,5 +30,48 @@ public class Habitat extends JPanel {
         this.add(hab4);
         this.add(hab5);
         this.add(hab6);
+
+        hab1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                sabana = new Sabana();
+            }
+        });
+
+        hab2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                humedales = new Humedales();
+            }
+        });
+
+        hab3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                bosque = new Bosque();
+            }
+        });
+
+        hab4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                aviario = new Aviario();
+            }
+        });
+
+        hab5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                selva = new Selva();
+            }
+        });
+
+        hab6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                acuario = new Acuario();
+            }
+        });
+
     }
 }
