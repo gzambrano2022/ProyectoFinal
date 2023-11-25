@@ -19,8 +19,6 @@ public class PanelPrincipal extends JPanel {
         this.setBackground(Color.white);
 
         this.add(habitat, BorderLayout.CENTER);
-        this.add(animales, BorderLayout.WEST);
-        this.add(comida, BorderLayout.EAST);
 
     }
 }
