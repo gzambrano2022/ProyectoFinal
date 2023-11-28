@@ -12,7 +12,7 @@ public class Animales extends JPanel {
         JButton anim1 = new JButton("leon");
         JButton anim2 = new JButton("carpincho");
         JButton anim3 = new JButton("serpiente");
-        JButton anim4 = new JButton("kanguro");
+        JButton anim4 = new JButton("canguro");
         JButton anim5 = new JButton("peces");
         JButton anim6 = new JButton("buho");
 
