@@ -1,10 +1,23 @@
 package interfaz;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Acuario extends JFrame {
+    private JPanel panelSabana;
 
-    public Acuario(){
+    private Alimento alimento;
+    private Animales animales;
+
+
+    public Acuario() {
+        this.setLayout(new BorderLayout());
+        panelSabana = new JPanel();
+        animales = new Animales();
+        alimento = new Alimento();
+
+        this.add(alimento,BorderLayout.EAST);
+        this.add(animales,BorderLayout.WEST);
 
         this.setSize(700,700);
         this.setLocationRelativeTo(null);
