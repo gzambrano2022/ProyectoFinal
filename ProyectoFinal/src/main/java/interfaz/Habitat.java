@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Habitat extends JPanel {
+    private Image sa, hu, bo, av, se, ac;
     private Sabana sabana;
     private Humedales humedales;
     private Bosque bosque;
@@ -17,12 +18,19 @@ public class Habitat extends JPanel {
         this.setLayout(new GridLayout(2,3));
         this.setBackground(Color.GRAY);
 
-        JButton hab1 = new JButton("habitat 1");
-        JButton hab2 = new JButton("habitat 2");
-        JButton hab3 = new JButton("habitat 3");
-        JButton hab4 = new JButton("habitat 4");
-        JButton hab5 = new JButton("habitat 5");
-        JButton hab6 = new JButton("habitat 6");
+        sa = new ImageIcon("src/main/java/interfaz/Imagenes/sabana.jpg").getImage();
+        ac = new ImageIcon("src/main/java/interfaz/Imagenes/acuario.jpg").getImage();
+        hu = new ImageIcon("src/main/java/interfaz/Imagenes/humedal.jpg").getImage();
+        bo = new ImageIcon("src/main/java/interfaz/Imagenes/bosque.jpg").getImage();
+        av = new ImageIcon("src/main/java/interfaz/Imagenes/aviario.jpg").getImage();
+        se = new ImageIcon("src/main/java/interfaz/Imagenes/selva.jpg").getImage();
+
+        JButton hab1 = new JButton(new ImageIcon(sa));
+        JButton hab2 = new JButton(new ImageIcon(hu));
+        JButton hab3 = new JButton(new ImageIcon(bo));
+        JButton hab4 = new JButton(new ImageIcon(av));
+        JButton hab5 = new JButton(new ImageIcon(se));
+        JButton hab6 = new JButton(new ImageIcon(ac));
 
         this.add(hab1);
         this.add(hab2);
