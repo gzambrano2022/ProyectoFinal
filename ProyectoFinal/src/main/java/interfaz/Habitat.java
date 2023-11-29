@@ -4,33 +4,26 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
 
 public class Habitat extends JPanel {
-    private Image sa, hu, bo, av, se, ac;
     private Sabana sabana;
     private Humedales humedales;
     private Bosque bosque;
     private Aviario aviario;
     private Selva selva;
     private Acuario acuario;
-    public Habitat() {
 
-        this.setLayout(new GridLayout(2,3));
+    public Habitat() {
+        this.setLayout(new GridLayout(2, 3));
         this.setBackground(Color.GRAY);
 
-        sa = new ImageIcon("src/main/java/interfaz/Imagenes/sabana.jpg").getImage();
-        ac = new ImageIcon("src/main/java/interfaz/Imagenes/acuario.jpg").getImage();
-        hu = new ImageIcon("src/main/java/interfaz/Imagenes/humedal.jpg").getImage();
-        bo = new ImageIcon("src/main/java/interfaz/Imagenes/bosque.jpg").getImage();
-        av = new ImageIcon("src/main/java/interfaz/Imagenes/aviario.jpg").getImage();
-        se = new ImageIcon("src/main/java/interfaz/Imagenes/selva.jpg").getImage();
-
-        JButton hab1 = new JButton(new ImageIcon(sa));
-        JButton hab2 = new JButton(new ImageIcon(hu));
-        JButton hab3 = new JButton(new ImageIcon(bo));
-        JButton hab4 = new JButton(new ImageIcon(av));
-        JButton hab5 = new JButton(new ImageIcon(se));
-        JButton hab6 = new JButton(new ImageIcon(ac));
+        JButton hab1 = createImageButton("src/main/java/interfaz/Imagenes/sabana.jpg", "Sabana");
+        JButton hab2 = createImageButton("src/main/java/interfaz/Imagenes/humedal.jpg", "Humedales");
+        JButton hab3 = createImageButton("src/main/java/interfaz/Imagenes/bosque.jpg", "Bosque");
+        JButton hab4 = createImageButton("src/main/java/interfaz/Imagenes/aviario.jpg", "Aviario");
+        JButton hab5 = createImageButton("src/main/java/interfaz/Imagenes/selva.jpg", "Selva");
+        JButton hab6 = createImageButton("src/main/java/interfaz/Imagenes/acuario.jpg", "Acuario");
 
         this.add(hab1);
         this.add(hab2);
@@ -80,6 +73,28 @@ public class Habitat extends JPanel {
                 acuario = new Acuario();
             }
         });
+    }
 
+    private JButton createImageButton(String imagePath, String tooltipText) {
+        ImageIcon icon = new ImageIcon(imagePath);
+        Image img = icon.getImage();
+        Image scaledImg = img.getScaledInstance(350, 300, Image.SCALE_SMOOTH);
+        ImageIcon scaledIcon = new ImageIcon(scaledImg);
+
+        JButton button = new JButton() {
+            @Override
+            public Point getToolTipLocation(MouseEvent event) {
+                Point point = new Point();
+                point.setLocation(this.getWidth() / 2, 10);
+                return point;
+            }
+        };
+
+        button.setIcon(scaledIcon);
+        button.setContentAreaFilled(false);
+        button.setBorderPainted(false);
+        button.setToolTipText(tooltipText);
+
+        return button;
     }
 }
