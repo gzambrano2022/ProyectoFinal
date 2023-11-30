@@ -1,5 +1,7 @@
 package interfaz;
 
+import org.example.SaturacionException;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -35,7 +37,11 @@ public class Habitat extends JPanel {
         hab1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                sabana = new Sabana();
+                try {
+                    sabana = new Sabana();
+                } catch (SaturacionException ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         });
 

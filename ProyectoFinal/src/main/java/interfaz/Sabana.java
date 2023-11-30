@@ -1,5 +1,7 @@
 package interfaz;
 
+import org.example.SaturacionException;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -10,10 +12,12 @@ public class Sabana extends JFrame {
     private PanelSabana panelSabana;
 
 
-    public Sabana() {
+
+    public Sabana() throws SaturacionException {
         this.setLayout(new BorderLayout());
         mypanel = new JPanel();
         animales = new Animales();
+
         alimento = new Alimento();
         panelSabana = new PanelSabana();
 

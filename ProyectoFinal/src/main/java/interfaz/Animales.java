@@ -1,10 +1,15 @@
 package interfaz;
 
+import org.example.Sabana;
+import org.example.SaturacionException;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Animales extends JPanel {
-
+    private Sabana sab;
     public Animales() {
         this.setLayout(new GridLayout(6,1));
         this.setBackground(Color.GRAY);
@@ -22,5 +27,20 @@ public class Animales extends JPanel {
         this.add(anim4);
         this.add(anim5);
         this.add(anim6);
+
+        anim1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    sab.agregaAnimal(1);
+                } catch (SaturacionException ex) {
+                    JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+
+    }
+    public void setSabana(Sabana sabana) {
+        this.sab=sabana;
     }
 }
