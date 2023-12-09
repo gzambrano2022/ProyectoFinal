@@ -10,7 +10,10 @@ import java.awt.event.ActionListener;
 
 public class Animales extends JPanel {
     private Sabana sab;
-    public Animales() {
+    private PanelSabana panelSabana;
+    public Animales(PanelSabana panelSabana) {
+        this.panelSabana = panelSabana;
+
         this.setLayout(new GridLayout(6,1));
         this.setBackground(Color.GRAY);
 
@@ -31,11 +34,12 @@ public class Animales extends JPanel {
         anim1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
+                panelSabana.dibujaLeon();
+                /*try {
                     sab.agregaAnimal(1);
                 } catch (SaturacionException ex) {
                     JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-                }
+                }*/
             }
         });
 

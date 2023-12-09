@@ -16,4 +16,7 @@ public class Deposito<T> {
         }
         return null;
     }
+    public int sizeCosas(){
+        return Cosas.size();
+    }
 }

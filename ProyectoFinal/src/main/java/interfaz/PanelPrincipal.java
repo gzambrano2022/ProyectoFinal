@@ -1,18 +1,15 @@
 package interfaz;
 
+import org.example.Sabana;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class PanelPrincipal extends JPanel {
-
-    private Alimento comida;
-    private Animales animales;
     private Habitat habitat;
 
-    public PanelPrincipal() {
+    public PanelPrincipal(Sabana sabana) {
 
-        comida = new Alimento();
-        animales = new Animales();
         habitat = new Habitat();
 
         this.setLayout(new BorderLayout());

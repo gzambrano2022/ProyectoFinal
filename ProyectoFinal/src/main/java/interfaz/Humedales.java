@@ -8,11 +8,12 @@ public class Humedales extends JFrame {
     private Alimento alimento;
     private Animales animales;
     private PanelHumedales panelHumedales;
+    private PanelSabana panSab;
 
     public Humedales() {
         this.setLayout(new BorderLayout());
         mypanel = new JPanel();
-        animales = new Animales();
+        animales = new Animales(panSab);
         alimento = new Alimento();
         panelHumedales = new PanelHumedales();
 

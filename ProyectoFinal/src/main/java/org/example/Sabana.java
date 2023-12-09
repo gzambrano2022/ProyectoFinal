@@ -1,25 +1,30 @@
 package org.example;
 
-public class Sabana extends Habitat{
-    private Deposito<Animales> leon;
+import java.security.DrbgParameters;
 
-    public Sabana(int n) throws SaturacionException {
-        leon = new Deposito<>();
-        agregaAnimal(n);
+public class Sabana extends Habitat{
+
+    private static final int CAPACIDAD_MAXIMA = 5;
+    private Deposito<Animales> leones;
+
+    public Sabana(){
+        super(CAPACIDAD_MAXIMA);
+        leones = new Deposito<>();
     }
 
-    public void agregaAnimal(int n) throws SaturacionException{
-        if(n > 5){
+    public void agregaLeon(Leon leon) throws SaturacionException{
+        if(leones.sizeCosas()>= CAPACIDAD_MAXIMA){
             throw new SaturacionException("Área saturada");
         }
         /*else if (n<=0) {
             throw new SaturacionException("Área saturada");
         }*/
         else{
-            for(int i=0;i<n;i++){
-                Animales a = new Leon(i);
-                leon.addCosas(a);
-            }
+            leones.addCosas(leon);
         }
+    }
+
+    public Leon quitaLeon(){
+return null;
     }
 }

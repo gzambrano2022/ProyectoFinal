@@ -8,12 +8,12 @@ public class Acuario extends JFrame {
     private Alimento alimento;
     private Animales animales;
     private PanelAcuario panelAcuario;
-
+    private PanelSabana panSab;
 
     public Acuario() {
         this.setLayout(new BorderLayout());
         mypanel = new JPanel();
-        animales = new Animales();
+        animales = new Animales(panSab);
         alimento = new Alimento();
         panelAcuario = new PanelAcuario();
 

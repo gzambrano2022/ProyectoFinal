@@ -8,12 +8,13 @@ public class Aviario extends JFrame {
     private Alimento alimento;
     private Animales animales;
     private PanelAviario panelAviario;
+    private PanelSabana panSab;
 
 
     public Aviario() {
         this.setLayout(new BorderLayout());
         mypanel = new JPanel();
-        animales = new Animales();
+        animales = new Animales(panSab);
         alimento = new Alimento();
         panelAviario = new PanelAviario();
 

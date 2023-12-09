@@ -16,7 +16,7 @@ public class Sabana extends JFrame {
     public Sabana() throws SaturacionException {
         this.setLayout(new BorderLayout());
         mypanel = new JPanel();
-        animales = new Animales();
+        animales = new Animales(panelSabana);
 
         alimento = new Alimento();
         panelSabana = new PanelSabana();

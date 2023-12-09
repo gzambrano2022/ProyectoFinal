@@ -8,11 +8,12 @@ public class Selva extends JFrame {
     private Alimento alimento;
     private Animales animales;
     private PanelSelva panelSelva;
+    private PanelSabana panSab;
 
     public Selva() {
         this.setLayout(new BorderLayout());
         mypanel = new JPanel();
-        animales = new Animales();
+        animales = new Animales(panSab);
         alimento = new Alimento();
         panelSelva = new PanelSelva(alimento, animales);
 

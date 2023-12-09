@@ -8,12 +8,12 @@ public class Bosque extends JFrame {
     private Alimento alimento;
     private Animales animales;
     private PanelBosque panelBosque;
-
+    private PanelSabana panSab;
 
     public Bosque() {
         this.setLayout(new BorderLayout());
         mypanel = new JPanel();
-        animales = new Animales();
+        animales = new Animales(panSab);
         alimento = new Alimento();
         panelBosque = new PanelBosque();
 
