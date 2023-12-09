@@ -7,8 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PanelSabana extends JPanel {
-    private Alimento alimento;
-    private Animales animales;
+    private AlimentoIF alimento;
+    private AnimalesIF animales;
     private ImageIcon fondo;
     private ImageIcon leon = null;
     private Sabana sab;

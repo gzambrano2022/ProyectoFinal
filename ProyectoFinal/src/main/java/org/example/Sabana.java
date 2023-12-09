@@ -22,6 +22,7 @@ public class Sabana extends Habitat{
         else{
             leones.addCosas(leon);
         }
+        leones.addCosas(leon);
     }
 
     public Leon quitaLeon(){

@@ -4,8 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PanelBosque extends JPanel {
-    private Alimento alimento;
-    private Animales animales;
+    private AlimentoIF alimento;
+    private AnimalesIF animales;
 
     public PanelBosque() {
 

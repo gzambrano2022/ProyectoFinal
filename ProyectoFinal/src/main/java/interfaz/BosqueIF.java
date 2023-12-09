@@ -3,23 +3,23 @@ package interfaz;
 import javax.swing.*;
 import java.awt.*;
 
-public class Humedales extends JFrame {
+public class BosqueIF extends JFrame {
     private JPanel mypanel;
-    private Alimento alimento;
-    private Animales animales;
-    private PanelHumedales panelHumedales;
+    private AlimentoIF alimento;
+    private AnimalesIF animales;
+    private PanelBosque panelBosque;
     private PanelSabana panSab;
 
-    public Humedales() {
+    public BosqueIF() {
         this.setLayout(new BorderLayout());
         mypanel = new JPanel();
-        animales = new Animales(panSab);
-        alimento = new Alimento();
-        panelHumedales = new PanelHumedales();
+        animales = new AnimalesIF(panSab);
+        alimento = new AlimentoIF();
+        panelBosque = new PanelBosque();
 
         this.add(alimento,BorderLayout.EAST);
         this.add(animales,BorderLayout.WEST);
-        this.add(panelHumedales, BorderLayout.CENTER);
+        this.add(panelBosque,BorderLayout.CENTER);
 
         this.setSize(1000,800);
         this.setLocationRelativeTo(null);

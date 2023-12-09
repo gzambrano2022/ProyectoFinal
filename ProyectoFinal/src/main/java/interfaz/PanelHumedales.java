@@ -4,8 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PanelHumedales extends JPanel {
-    private Alimento alimento;
-    private Animales animales;
+    private AlimentoIF alimento;
+    private AnimalesIF animales;
 
     private ImageIcon fondo;
     public PanelHumedales() {

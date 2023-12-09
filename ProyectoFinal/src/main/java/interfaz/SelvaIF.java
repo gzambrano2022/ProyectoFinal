@@ -3,18 +3,18 @@ package interfaz;
 import javax.swing.*;
 import java.awt.*;
 
-public class Selva extends JFrame {
+public class SelvaIF extends JFrame {
     private JPanel mypanel;
-    private Alimento alimento;
-    private Animales animales;
+    private AlimentoIF alimento;
+    private AnimalesIF animales;
     private PanelSelva panelSelva;
     private PanelSabana panSab;
 
-    public Selva() {
+    public SelvaIF() {
         this.setLayout(new BorderLayout());
         mypanel = new JPanel();
-        animales = new Animales(panSab);
-        alimento = new Alimento();
+        animales = new AnimalesIF(panSab);
+        alimento = new AlimentoIF();
         panelSelva = new PanelSelva(alimento, animales);
 
         this.add(alimento,BorderLayout.EAST);

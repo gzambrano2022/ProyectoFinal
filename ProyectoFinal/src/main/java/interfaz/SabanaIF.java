@@ -5,20 +5,20 @@ import org.example.SaturacionException;
 import javax.swing.*;
 import java.awt.*;
 
-public class Sabana extends JFrame {
+public class SabanaIF extends JFrame {
     private JPanel mypanel;
-    private Alimento alimento;
-    private Animales animales;
+    private AlimentoIF alimento;
+    private AnimalesIF animales;
     private PanelSabana panelSabana;
 
 
 
-    public Sabana() throws SaturacionException {
+    public SabanaIF() throws SaturacionException {
         this.setLayout(new BorderLayout());
         mypanel = new JPanel();
-        animales = new Animales(panelSabana);
+        animales = new AnimalesIF(panelSabana);
 
-        alimento = new Alimento();
+        alimento = new AlimentoIF();
         panelSabana = new PanelSabana();
 
         this.add(alimento,BorderLayout.EAST);

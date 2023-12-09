@@ -8,15 +8,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 
-public class Habitat extends JPanel {
-    private Sabana sabana;
-    private Humedales humedales;
-    private Bosque bosque;
-    private Aviario aviario;
-    private Selva selva;
-    private Acuario acuario;
+public class HabitatIF extends JPanel {
+    private SabanaIF sabana;
+    private HumedalesIF humedales;
+    private BosqueIF bosque;
+    private AviarioIF aviario;
+    private SelvaIF selva;
+    private AcuarioIF acuario;
 
-    public Habitat() {
+    public HabitatIF() {
         this.setLayout(new GridLayout(2, 3));
         this.setBackground(Color.GRAY);
 
@@ -38,7 +38,7 @@ public class Habitat extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    sabana = new Sabana();
+                    sabana = new SabanaIF();
                 } catch (SaturacionException ex) {
                     throw new RuntimeException(ex);
                 }
@@ -48,35 +48,35 @@ public class Habitat extends JPanel {
         hab2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                humedales = new Humedales();
+                humedales = new HumedalesIF();
             }
         });
 
         hab3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                bosque = new Bosque();
+                bosque = new BosqueIF();
             }
         });
 
         hab4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                aviario = new Aviario();
+                aviario = new AviarioIF();
             }
         });
 
         hab5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                selva = new Selva();
+                selva = new SelvaIF();
             }
         });
 
         hab6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                acuario = new Acuario();
+                acuario = new AcuarioIF();
             }
         });
     }

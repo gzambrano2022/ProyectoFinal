@@ -3,8 +3,8 @@ package interfaz;
 import javax.swing.*;
 import java.awt.*;
 
-public class Alimento extends JPanel {
-    public Alimento() {
+public class AlimentoIF extends JPanel {
+    public AlimentoIF() {
         this.setLayout(new GridLayout(6,1));
         this.setBackground(Color.GRAY);
 

@@ -4,10 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PanelSelva extends JPanel {
-    private Alimento alimento;
-    private Animales animales;
+    private AlimentoIF alimento;
+    private AnimalesIF animales;
 
-    public PanelSelva(Alimento alimento, Animales animales) {
+    public PanelSelva(AlimentoIF alimento, AnimalesIF animales) {
         this.alimento = alimento;
         this.animales = animales;
 

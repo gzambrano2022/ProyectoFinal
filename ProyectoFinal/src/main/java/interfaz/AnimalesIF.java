@@ -8,10 +8,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Animales extends JPanel {
+public class AnimalesIF extends JPanel {
     private Sabana sab;
     private PanelSabana panelSabana;
-    public Animales(PanelSabana panelSabana) {
+    public AnimalesIF(PanelSabana panelSabana) {
         this.panelSabana = panelSabana;
 
         this.setLayout(new GridLayout(6,1));
